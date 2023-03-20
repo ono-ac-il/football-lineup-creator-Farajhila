@@ -12,3 +12,8 @@ const players = [
     { name: 'Buffon', position: 'goalkeeper' },
     { name: 'Casillas', position: 'goalkeeper' }
 ]
+/* filter all  the goalkeepers from players array*/
+const goalkeeper = [
+
+    
+]
