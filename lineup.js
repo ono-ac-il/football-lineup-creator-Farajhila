@@ -35,10 +35,6 @@ const mappedGoalkeepers = goalkeepers.map(function (item) {
     return `<option value="${item.name}">${item.name}</option>`
 });
 
-document.getElementById('pos1').innerHTML = mappedGoalkeepers.join('');
-
-const goalkeeper = players.filter(function (player) {
-    return player.position == "goalkeeper";
 
 /*defender:*/
 const defender = players.filter(function (player) {
