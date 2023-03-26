@@ -1,42 +1,46 @@
+
+
+
 const players = [
+    { name: '', position: 'forward' },
     { name: 'Ronaldo', position: 'forward' },
     { name: 'Messi', position: 'forward' },
     { name: 'Neymar', position: 'forward' },
+    { name: 'ohana', position: 'forward' },
+    { name: 'harazi', position: 'forward' },
+    { name: 'revivo', position: 'forward' },
+    { name: '', position: 'midfielder' },
     { name: 'Modric', position: 'midfielder' },
     { name: 'Kroos', position: 'midfielder' },
-    { name: 'De Bruyne', position: 'midfielder' },
+    { name: 'De Bruyne', position: 'midfielder'},
+    { name: 'mezrahi', position: 'midfielder'},
+    { name: 'kedmi', position: 'midfielder'},
+    { name: 'avram', position: 'midfielder'},
+    { name: '', position: 'defender' },
     { name: 'Alaba', position: 'defender' },
     { name: 'Ramos', position: 'defender' },
     { name: 'Varane', position: 'defender' },
+    { name: 'levi', position: 'defender' },
+    { name: 'cohen', position: 'defender' },
+    { name: '', position: 'goalkeeper' },    
     { name: 'Neuer', position: 'goalkeeper' },
     { name: 'Buffon', position: 'goalkeeper' },
     { name: 'Casillas', position: 'goalkeeper' },
-    { name: 'Davidovich', position: 'goalkeeper' }
+   
 ]
-/* filter all the golakeepers from players array */
+/*filter all the goalkeeper from players array */
+//goalkeeper:
+const goalkeeper = players.filter(function (player) {
+    return player.position == "goalkeeper";
+})
 
-
-const goalkeepers = players.filter(function (player) {
-    return player.position == 'goalkeeper';
-});
-
-/*var gkStr = '';
-for (let i = 0; i < goalkeepers.length; i++) {
-    // gkStr += '<option value="' + goalkeepers[0].name + '">' + goalkeepers[0].name + '</option >';
-    gkStr += `<option value="${goalkeepers[i].name}">${goalkeepers[i].name}</option>`;
-}*/
-
-const mappedGoalkeepers = goalkeepers.map(function (item) {
+const mappedGoalkeepers = goalkeeper.map(function (item) {
     return `<option value="${item.name}">${item.name}</option>`
 });
 
 document.getElementById('pos1').innerHTML = mappedGoalkeepers.join('');
-const mappedGoalkeepers = goalkeepers.map(function (item) {
-    return `<option value="${item.name}">${item.name}</option>`
-});
 
-
-/*defender:*/
+//defender:
 const defender = players.filter(function (player) {
     return player.position == "defender";
 })
@@ -51,7 +55,7 @@ document.getElementById('def3').innerHTML = mappeddefender.join('');
 document.getElementById('def4').innerHTML = mappeddefender.join('');
 document.getElementById('def5').innerHTML = mappeddefender.join('');
 
-/*midfielder:*/
+//midfielder:
 const midfielder = players.filter(function (player) {
     return player.position == "midfielder";
 })
@@ -88,3 +92,5 @@ function lineUpConsole() {
     console.log(" " + document.getElementById("st1").value + " " + document.getElementById("st2").value + " " + document.getElementById("st3").value)
 }
 btn.addEventListener('click', lineUpConsole);
+
+
