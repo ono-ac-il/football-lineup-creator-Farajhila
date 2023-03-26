@@ -40,7 +40,7 @@ document.getElementById('pos1').innerHTML = mappedGoalkeepers.join('');
 const goalkeeper = players.filter(function (player) {
     return player.position == "goalkeeper";
 
-//defender:
+/*defender:*/
 const defender = players.filter(function (player) {
     return player.position == "defender";
 })
@@ -55,7 +55,7 @@ document.getElementById('def3').innerHTML = mappeddefender.join('');
 document.getElementById('def4').innerHTML = mappeddefender.join('');
 document.getElementById('def5').innerHTML = mappeddefender.join('');
 
-//midfielder:
+/*midfielder:*/
 const midfielder = players.filter(function (player) {
     return player.position == "midfielder";
 })
